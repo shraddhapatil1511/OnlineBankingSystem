@@ -1,0 +1,37 @@
+@Restcontroller
+
+public Class Student
+{
+@Autowired StudentService stuservice;
+
+StudentService stu=new StudenrtService();
+
+
+
+
+
+
+@Getmapping(\student)
+List<Student>getStudent()
+{
+
+return stuservice.get
+}
+
+
+@Getmapping(\student)
+List<Student>getStudentById(@RequestParam int id)
+{
+
+return stuservice.getStudentById();
+}
+
+Map<String,Object>m=New HashMap<>();
+m.put("a",emp);
+m.put("b",emp2);
+
+for(string s:m.keyset())
+{sop(m.keyset() + m.values())}
+
+When a try catch block is present in another try block then it is called the nested try catch block. Each time a try block does not have a catch handler for a particular exception, then the catch blocks of parent try block are inspected for that exception, if match is found that that catch block executes.
+
