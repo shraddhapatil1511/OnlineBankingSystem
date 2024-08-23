@@ -1,0 +1,76 @@
+Insert into Student(id,name,college,city),where values('1',abx,)
+Insert into Customers(id,name) Select id,name from emp where id=1;
+
+Select * from employee where id=1;
+
+select max(salary)from emp where sal< (Select max (sal) from emp)
+
+select count(empid) from Emp;
+select AVG(slary)from Emp;
+
+select * from emp where name like '%A';//ends with A
+
+select * from stu order  by name dec;
+select * from stu where name like 's%';//start with s;
+not like %a
+a%o//start with a and ends with o;
+
+SELECT * FROM Customers
+WHERE Country IN ('Germany', 'France', 'UK');
+
+Select * from Customers where id between 10 AND 20;
+
+The following SQL statement selects all customers that are from the same countries as the suppliers:
+
+Example
+SELECT * FROM Customers
+WHERE Country IN (SELECT Country FROM Suppliers);
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND City='Berlin';
+
+SELECT * FROM Customers
+WHERE Country='Germany' OR City='Berlin';
+
+SELECT * FROM Customers
+WHERE NOT Country='Germany';
+
+Update-
+
+Update from Emp 
+SET emp_name='abc',emp_city='mumbai'
+where Emp_id=1;
+
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+SELECT *
+FROM Orders
+LEFT JOIN Customers
+ON Orders.CustomerID
+=
+Customers.CustomerID
+;
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID
+ORDER BY Customers.CustomerName;
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country;
+
+
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5;//customer id count less than 5
+  
